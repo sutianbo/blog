@@ -1,0 +1,11 @@
+logging.file: logs/blog.log 
+server.port: 8080
+server.session.timeout: 10800
+server.context-path: /
+server.tomcat.uri-encoding: UTF-8
+server.tomcat.compression: on
+
+spring.thymeleaf.cache: false  
+spring.thymeleaf.mode: LEGACYHTML5
+
+
