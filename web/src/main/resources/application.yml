@@ -9,3 +9,13 @@ spring.thymeleaf.cache: false
 spring.thymeleaf.mode: LEGACYHTML5
 
 
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/blog
+    username: root
+    password: 
+
+spring.jpa.properties.hibernate.hbm2ddl.auto: update
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    

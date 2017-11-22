@@ -28,12 +28,6 @@
 		
 		<dependency>
 			<groupId>com.blog</groupId>
-			<artifactId>core</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.blog</groupId>
 			<artifactId>model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
