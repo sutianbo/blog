@@ -1,8 +1,8 @@
 package com.blog.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,20 +15,20 @@ import com.blog.repo.UserRepository;
 public class UserController {
 	
 	@Autowired
-	UserRepository userRepository;
+	RedisTemplate<String, String> redisTemplate;
 	
-	@RequestMapping(value = "/add",method = RequestMethod.POST)
+	@Autowired
+	UserRepository userRepository;
+
+	@RequestMapping(value = "/addUser",method = RequestMethod.GET)
 	@ResponseBody
 	public void add(User user) {
 		userRepository.save(user);
 	}
 	
-	@RequestMapping(value = "/{id}",method = RequestMethod.GET)
+	@RequestMapping(value = "/findUser",method = RequestMethod.GET)
 	@ResponseBody
-	public User findOne(@PathVariable("id")Long id) {
-		if(true) {
-			throw new IllegalStateException();
-		}
+	public User findOne(Long id) {
 		User user = userRepository.findOne(id);
 		return user;
 	}
