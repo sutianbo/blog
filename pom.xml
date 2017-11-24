@@ -5,12 +5,13 @@
     <artifactId>parent</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
-
+	
     <modules>
         <module>core</module>
         <module>repo</module>
         <module>web</module>
         <module>model</module>
         <module>service</module>
-  </modules>
+    </modules>
+  
 </project>

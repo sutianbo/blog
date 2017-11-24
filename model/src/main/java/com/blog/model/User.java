@@ -3,8 +3,6 @@ package com.blog.model;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.blog.core.base.LogicDeleteEntity;
-
 @Entity
 @Table(name = "user")
 public class User extends LogicDeleteEntity{

@@ -1,4 +1,4 @@
-package com.blog.core.base;
+package com.blog.model;
 
 import java.io.Serializable;
 import java.util.Date;

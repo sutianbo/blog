@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.blog.core.base.BaseService;
 import com.blog.core.cache.RedisService;
 import com.blog.model.User;
+import com.blog.model.dto.UserModel;
 import com.blog.repo.UserRepository;
 
 @Controller
@@ -16,9 +18,10 @@ public class UserController {
 	
 	@Autowired
 	UserRepository userRepository;
-	
 	@Autowired
 	RedisService<String> redisService;
+	@Autowired
+	BaseService<User, Long> baseService;
 	
 	@RequestMapping(value = "/addUser",method = RequestMethod.GET)
 	@ResponseBody
@@ -28,8 +31,8 @@ public class UserController {
 	
 	@RequestMapping(value = "/findUser",method = RequestMethod.GET)
 	@ResponseBody
-	public User findOne(Long id) {
-		User user = userRepository.findOne(id);
-		return user;
+	public void findOne(Long id) {
+		UserModel userModel = userRepository.findDtoByUsername("su");
+		System.out.println(userModel);
 	}
 }

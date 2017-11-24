@@ -1,4 +1,4 @@
-package com.blog.core.constant;
+package com.blog.model.constant;
 
 public enum DeleteFlag {
 

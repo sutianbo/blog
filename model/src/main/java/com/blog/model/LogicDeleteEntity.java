@@ -1,8 +1,8 @@
-package com.blog.core.base;
+package com.blog.model;
 
 import javax.persistence.MappedSuperclass;
 
-import com.blog.core.constant.DeleteFlag;
+import com.blog.model.constant.DeleteFlag;
 
 @MappedSuperclass
 public class LogicDeleteEntity extends BaseEntity{
