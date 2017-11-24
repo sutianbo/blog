@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service("redisService")
 public class RedisServiceImpl<V> implements RedisService<V>{
 	
 	@Autowired
@@ -62,7 +62,7 @@ public class RedisServiceImpl<V> implements RedisService<V>{
 		return hashOperations.delete(key, hashKeys);
 	}
 	
-	public Long hSize(String key) {
+	public Long hLen(String key) {
 		return hashOperations.size(key);
 	}
 }
