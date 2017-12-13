@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.blog.core.base.BaseService;
 import com.blog.core.cache.RedisService;
 import com.blog.model.User;
 import com.blog.model.dto.UserModel;
@@ -20,8 +19,6 @@ public class UserController {
 	UserRepository userRepository;
 	@Autowired
 	RedisService<String> redisService;
-	@Autowired
-	BaseService<User, Long> baseService;
 	
 	@RequestMapping(value = "/addUser",method = RequestMethod.GET)
 	@ResponseBody
