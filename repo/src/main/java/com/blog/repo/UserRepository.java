@@ -14,6 +14,8 @@ public interface UserRepository extends BaseRepository<User, Long>{
 	
 	User findByUsername(@Param("username")String username);
 
+	User findById();
+	
 	@Query(value = "select new com.blog.model.dto.UserModel(username,password) from User where username =:username")
 	UserModel findDtoByUsername(@Param("username")String username);
 }
