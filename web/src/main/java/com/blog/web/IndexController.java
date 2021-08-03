@@ -12,4 +12,8 @@ public class IndexController {
 	public String index() {
 		return "index";
 	}
+
+	public void test2(){
+		
+	}
 }
