@@ -34,4 +34,8 @@ public class UserController {
 		int b = 2;
 		System.out.println(userModel);
 	}
+
+	public void testMaster(){
+
+	}
 }
