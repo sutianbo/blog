@@ -31,6 +31,7 @@ public class UserController {
 	public void findOne(Long id) {
 		UserModel userModel = userRepository.findDtoByUsername("su");
 		String a = "23";
+		int b = 2;
 		System.out.println(userModel);
 	}
 }
