@@ -30,6 +30,7 @@ public class UserController {
 	@ResponseBody
 	public void findOne(Long id) {
 		UserModel userModel = userRepository.findDtoByUsername("su");
+		String a = "23";
 		System.out.println(userModel);
 	}
 }
