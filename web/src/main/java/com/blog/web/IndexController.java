@@ -10,7 +10,7 @@ public class IndexController {
 
 	@RequestMapping(value = "/index",method = RequestMethod.GET)
 	public String index() {
-		String s = "7";
+		String s = "8";
 		return "index";
 	}
 
