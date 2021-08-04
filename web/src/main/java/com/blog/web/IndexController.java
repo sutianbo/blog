@@ -15,6 +15,6 @@ public class IndexController {
 	}
 
 	public void test2(){
-		int b = 6;
+		int b = 7;
 	}
 }
